@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "build:local": "nuxt build --dotenv .env.local",
+    "build:dev": "nuxt build --dotenv .env.dev",
+    "build:prod": "nuxt build --dotenv .env.prod",
+    "dev": "nuxt dev - --host",
+    "dev:local": "cross-env nuxt dev --dotenv .env.local --host",
+    "dev:local-https": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --dotenv .env.local --host --https --ssl-cert ./https/localhost+3.pem --ssl-key ./https/localhost+3-key.pem",
+    "dev:dev": "cross-env nuxt dev --dotenv .env.dev --host",
+    "dev:prod": "cross-env nuxt dev --dotenv .env.prod --host",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start",
+    "update-i18n-gs": "node tools/i18n/googleSheet-to-json.js",
+    "update-i18n-ex": "node tools/i18n/excel-to-json.js"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "fs-extra": "^11.2.0",
+    "googleapis": "^144.0.0",
+    "nuxt": "^3.12.4",
+    "vue": "^3.4.38",
+    "xlsx": "^0.18.5"
+  }
+}
